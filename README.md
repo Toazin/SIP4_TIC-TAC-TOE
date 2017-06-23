@@ -1,14 +1,4 @@
-# TIC TAC TOE
------------
+# Tic-Tac-Toe-AI
+Multiple Difficulty levels AI to play the simple classic game Tic-Tac-Toe
 
-Descripción
------------
-Proyecto realizado para la practica 4 de la materia de Sistemas inteligentes.
-Este Tic Tac Toe se puede resolver con los algoritmos de:
-- búsqueda con adversario
-
-Requerimientos
---------------
-Se utiliza para este proyecto la libreria https://www.npmjs.com/package/tic-tac-toe-js para el Tic-tac-toe.
-Ejecutar `npm install`
-
+This project accompines the full tutorial on builiding Tic-Tac-Toe AI located here : http://mostafa-samir.github.io/Tic-Tac-Toe-AI/
