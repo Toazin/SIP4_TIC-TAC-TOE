@@ -1,53 +1,35 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>Tic-Tac-Toe AI</title>
-        <link rel = 'stylesheet' type = 'text/css' href = 'styles/ui.css'>
-    </head>
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>TicTacToe Algorithm</title>
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css'>
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <html ng-app><head><script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+  </head>
+  <body id = 'controller' ng-controller="tictaccontroller">
+    <h1>Tic Tac toe adversarial search</h1>
+    <div class="container">
+      <div class="well">
+        <div><button class="btn-primary btn-lg" ng-repeat="cell in board[0]" ng-disabled="isTaken(cell);" ng-click="move(cell);">{{ cell.value }}</button></div>
+        <div><button class="btn-primary btn-lg" ng-repeat="cell in board[1]" ng-disabled="isTaken(cell);" ng-click="move(cell);">{{ cell.value }}</button></div>
+        <div><button class="btn-primary btn-lg" ng-repeat="cell in board[2]" ng-disabled="isTaken(cell);" ng-click="move(cell);">{{ cell.value }}</button></div>
+        <br/>
 
-    <body>
-        <div class = 'main-container'>
-            <div class = 'board'>
-                <!-- data-indx following cell divs represents cell index in 1D array representation -->
-                <div class='cell' data-indx = "0" ></div>
-                <div class='cell' data-indx = "1" ></div>
-                <div class='cell' data-indx = "2" ></div>
-                <div class='cell' data-indx = "3" ></div>
-                <div class='cell' data-indx = "4" ></div>
-                <div class='cell' data-indx = "5" ></div>
-                <div class='cell' data-indx = "6" ></div>
-                <div class='cell' data-indx = "7" ></div>
-                <div class='cell' data-indx = "8" ></div>
-            </div>
+      </div>
+    </div>
+    <p>Para reiniciar refresca la página</p>
 
-            <div class = 'control'>
-                <!-- div.intial displays the starting controls -->
-                <div class = 'intial'>
-                    <div class = 'difficulty'>
-                        <span class = 'level not-selected' id = "blind">Blind</span>
-                        <span class = 'level not-selected' id = "novice">Novice</span>
-                        <span class = 'level not-selected' id = "master">Master!</span>
-                    </div>
-
-                    <div class='start'> Start </div>
-                </div>
-
-                <!-- div.ingame displays in-game messages and controls -->
-                <div class = 'ingame' id="human">It's your turn ...</div>
-                <div class = 'ingame' id="ai">
-                    <img src = "imgs/robot.png" id = "robot" class = "robot" />
-                    <p>Waint for it ...</p>
-                </div>
-                <div class = 'ingame' id="won">You won !</div>
-                <div class = 'ingame' id="lost">You lost !</div>
-                <div class = 'ingame' id="draw">It's a Draw</div>
-            </div>
-        </div>
-
-        <script src = "scripts/jquery-1.10.1.min.js"></script>
-        <script src = "scripts/ui.js"></script>
-        <script src = "scripts/game.js"></script>
-        <script src = "scripts/ai.js"></script>
-        <script src = "scripts/control.js"></script>
-    </body>
+  </body>
+</html>
+    <script src="js/index.js"></script>
+    <script src="js/ai.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/ui.js"></script>
+</body>
 </html>
